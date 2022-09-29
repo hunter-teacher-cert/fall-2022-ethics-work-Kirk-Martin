@@ -13,14 +13,7 @@ def find_name(line):
     pattern=r'[A-Z]\w*\s[A-Z]\w*'
     result = re.findall(pattern,line)
 
-    #First Name Middle Name and Last name expression
-    pattern=r'[A-Z]\w*\s[A-Z]\w*\s[A-Z]\w*'
-    result = result + re.findall(pattern,line)
-
-    #F. M. Last Works
-    pattern=r'[A-Z]\.\s[A-Z]\.\s[A-Z]\w*'
-    result = result + re.findall(pattern,line)
-    
+     
     #Mr. Last attempt at expression
     pattern=r'Mr.\s[A-Z]\w*'
     result = result + re.findall(pattern,line)
